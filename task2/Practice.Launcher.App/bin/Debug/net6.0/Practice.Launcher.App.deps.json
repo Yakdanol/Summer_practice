@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Practice.Launcher.App/1.0.0": {
+        "dependencies": {
+          "Practice.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Practice.Launcher.App.dll": {}
+        }
+      },
+      "Practice.Domain/1.0.0": {
+        "runtime": {
+          "Practice.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Practice.Launcher.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Practice.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
