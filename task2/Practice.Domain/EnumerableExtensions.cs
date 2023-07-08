@@ -44,10 +44,10 @@ public static class EnumerableExtensions
                 (t1, t2) => t1.Concat(new T[] { t2 }));
     }
 
-    public static void CheckCollections<T>(this IEnumerable<T> collection, CollectionsComparer<T> comparer)
+    private static void CheckCollections<T>(IEnumerable<T> collection, CollectionsComparer<T> comparer)
     {
-        if (collection == null || comparer == null)
-            throw new ArgumentNullException("Null аргумент в компораторе", nameof(collection));
+        if (collection is null || comparer is null)
+            throw new ArgumentNullException("Null аргумент в компораторе", nameof(collection) + nameof(comparer));
         
         if (collection.Distinct(comparer).Count() != collection.Count())
             throw new ArgumentException("Повтор значений в коллекции", nameof(collection));
