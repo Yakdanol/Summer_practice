@@ -46,8 +46,11 @@ public static class EnumerableExtensions
 
     private static void CheckCollections<T>(IEnumerable<T> collection, CollectionsComparer<T> comparer)
     {
-        if (collection is null || comparer is null)
-            throw new ArgumentNullException("Null аргумент в компораторе", nameof(collection) + nameof(comparer));
+        if (collection is null)
+            throw new ArgumentNullException("Подан Null аргумент", nameof(collection));
+        
+        if (comparer is null)
+            throw new ArgumentNullException("Подан Null аргумент", nameof(comparer));
         
         if (collection.Distinct(comparer).Count() != collection.Count())
             throw new ArgumentException("Повтор значений в коллекции", nameof(collection));
