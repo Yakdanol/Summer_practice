@@ -18,7 +18,6 @@ public class Student :
         DataSet,
         InfrastructureActivities
     }
-    // private readonly string _course;
 
     /// <summary>
     /// 
@@ -32,10 +31,10 @@ public class Student :
     public Student(string surname = "", string name = "", string patronymic = "", 
         string studyGroup = "", Course course = default)
     {
-        _surname = surname ?? throw new System.ArgumentNullException(nameof(surname));
-        _name = name ?? throw new System.ArgumentNullException(nameof(name));
-        _patronymic = patronymic ?? throw new System.ArgumentNullException(nameof(patronymic));
-        _studyGroup = studyGroup ?? throw new System.ArgumentNullException(nameof(studyGroup));
+        _surname = surname ?? throw new ArgumentNullException(nameof(surname));
+        _name = name ?? throw new ArgumentNullException(nameof(name));
+        _patronymic = patronymic ?? throw new ArgumentNullException(nameof(patronymic));
+        _studyGroup = studyGroup ?? throw new ArgumentNullException(nameof(studyGroup));
         _course = course;
     }
     
@@ -81,15 +80,10 @@ public class Student :
         return _surname.Equals(@string);
     }
     
-    public bool Equals(Enum @enum) // для enum
+    public bool Equals(Course @enum) // для enum
     {
         return _course.Equals(@enum);
     }
-    
-    /*public bool Equals(int? other) // для int, вроде не надо
-    {
-        return _surname.Equals(other);
-    }*/
 
     public bool Equals(object? obj)
     {

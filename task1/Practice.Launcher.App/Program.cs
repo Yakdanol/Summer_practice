@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using Practice.Domain;
+﻿using Practice.Domain;
 
 namespace Practice.Launcher.App
 {
@@ -143,6 +141,7 @@ namespace Practice.Launcher.App
                 Console.WriteLine(ex.Message);
                 throw new Exception();
             }
+            
             /*catch (ArgumentException ex)
             {
                 Console.WriteLine(ex.Message);
@@ -150,9 +149,7 @@ namespace Practice.Launcher.App
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                // TODO: handler for other exceptions
             }*/
-            
         }
     }
 }
